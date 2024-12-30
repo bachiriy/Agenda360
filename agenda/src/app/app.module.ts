@@ -15,10 +15,10 @@ import { AppComponent } from './app.component';
     BrowserAnimationsModule,
     HttpClientModule,
     
-    CoreModule, 
-    SharedModule, 
+    CoreModule,
+    SharedModule,
     LayoutModule,
-    AppRoutingModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
