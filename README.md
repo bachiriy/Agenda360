@@ -110,3 +110,6 @@ MIT
 3. Commit changes
 4. Push to branch
 5. Submit pull request
+
+## Figma 
+[Figma Link](https://www.figma.com/design/XAreWzWr9AsDzdrcVSxrO6/Agenda360?node-id=0-1&p=f)
