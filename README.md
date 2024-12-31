@@ -66,13 +66,15 @@ Visit `http://localhost:4200` in your browser.
 ```
 src/
 ├── app/
-│   ├── components/
-│   ├── services/
-│   ├── models/
-│   ├── guards/
-│   └── shared/
-├── assets/
-└── styles/
+│   ├── features/
+│   │   ├── categories/
+│   │   ├── dashboard/
+│   │   └── tasks/
+│   │      
+│   ├── core/
+│   │   ├── models/
+│   │   ├── services/
+└── assets/
 ```
 
 ## Validation Rules
