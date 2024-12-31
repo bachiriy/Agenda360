@@ -1,0 +1,21 @@
+.list-group-item {
+  margin-bottom: 0.5rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.btn-group {
+  .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .material-icons {
+      font-size: 18px;
+    }
+  }
+}
+
+.gap-2 {
+  gap: 0.5rem;
+} 

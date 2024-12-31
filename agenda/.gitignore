@@ -1,5 +1,3 @@
-# See https://docs.github.com/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
-
 # Compiled output
 /dist
 /tmp
@@ -9,6 +7,7 @@
 # Node
 /node_modules
 npm-debug.log
+yarn-debug.log
 yarn-error.log
 
 # IDEs and editors
@@ -19,6 +18,7 @@ yarn-error.log
 *.launch
 .settings/
 *.sublime-workspace
+.vscode/
 
 # Visual Studio Code
 .vscode/*
@@ -40,3 +40,43 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+# Environment files
+/src/environments/*.ts
+!/src/environments/environment.ts
+
+# Firebase
+.firebase/
+*-debug.log
+.runtimeconfig.json
+
+# Local development
+*.local
+*.log
+.env
+.env.*
+
+# Build files
+*.js.map
+*.css.map
+
+# Testing
+/coverage
+/.nyc_output
+
+# e2e
+/e2e/*.js
+/e2e/*.map
+
+# Documentation
+/documentation
+
+# Package manager locks
+# Uncomment if you want to ignore package-lock.json
+# package-lock.json
+# yarn.lock
+
+# Optional: Backup files
+*.bak
+*.swp
+*~ 

@@ -1,0 +1,76 @@
+<div class="container mt-4">
+  <div class="row mb-4">
+    <div class="col">
+      <h2>My Tasks</h2>
+    </div>
+    <div class="col-auto">
+      <button class="btn btn-dark" routerLink="/tasks/new">
+        Add New Task
+      </button>
+    </div>
+  </div>
+
+  <div class="row mb-4">
+    <div class="col-md-6">
+      <div class="input-group">
+        <input 
+          type="text" 
+          class="form-control" 
+          placeholder="Search tasks..."
+          [(ngModel)]="searchQuery"
+          (input)="onSearch($event)"
+        >
+      </div>
+    </div>
+    <div class="col-md-4">
+      <select 
+        class="form-select"
+        [(ngModel)]="selectedCategory"
+        (change)="onCategoryChange($event)"
+      >
+        <option value="">All Categories</option>
+        <option *ngFor="let category of categories" [value]="category.id">
+          {{ category.name }}
+        </option>
+      </select>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <div class="list-group">
+        <div *ngFor="let task of filteredTasks" class="list-group-item list-group-item-action">
+          <div class="d-flex w-100 justify-content-between align-items-center">
+            <div>
+              <h5 class="mb-1">{{ task.title }}</h5>
+              <p class="mb-1">{{ task.description }}</p>
+              <small>
+                Category: {{ getCategoryName(task.categoryId) }} |
+                Due: {{ task.dueDate | date:'medium' }}
+              </small>
+            </div>
+            <div class="btn-group">
+              <button 
+                class="btn"
+                [ngClass]="{
+                  'btn-dark': task.status === Status.DONE,
+                  'btn-secondary': task.status === Status.DOING,
+                  'btn-outline-dark': task.status === Status.TODO
+                }"
+                (click)="cycleTaskStatus(task.id, task.status)"
+              >
+                {{ task.status | titlecase }}
+              </button>
+              <button class="btn btn-outline-secondary" [routerLink]="['/tasks', task.id, 'edit']">
+                Edit
+              </button>
+              <button class="btn btn-outline-danger" (click)="deleteTask(task.id)">
+                Delete
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> 

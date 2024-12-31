@@ -1,26 +1,31 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { Title } from '@angular/platform-browser';
+
 import { AppRoutingModule } from './app-routing.module';
-import { CoreModule } from './core/core.module';
-import { SharedModule } from './shared/shared.module';
-import { LayoutModule } from './layout/layout.module';
 import { AppComponent } from './app.component';
 
 @NgModule({
-  declarations: [ AppComponent ],
+  declarations: [
+    AppComponent
+  ],
   imports: [
     BrowserModule,
+    AppRoutingModule,
     BrowserAnimationsModule,
+    ReactiveFormsModule,
     HttpClientModule,
-    
-    CoreModule,
-    SharedModule,
-    LayoutModule,
-    AppRoutingModule
+    MatSnackBarModule,
+    NgbModule
   ],
-  providers: [],
+  providers: [
+    Title
+  ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { } 

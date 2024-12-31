@@ -1,0 +1,55 @@
+<div class="p-4 container">
+    <div class="flex  justify-between w-screen bg-gray-50 rounded p-2 shadow-md">
+      <div class="flex items-center gap-2">
+        <div class="p-1 rounded-full bg-green-100">
+
+        </div>
+        <div>
+          <p class="text-[10px] text-gray-500">Completion</p>
+          <p class="text-xs font-semibold">{{ stats.completionRate | number:'1.0-0' }}%</p>
+        </div>
+      </div>
+  
+      <div class="flex items-center gap-2">
+        <div class="p-1 rounded-full bg-yellow-100">
+    
+        </div>
+        <div>
+          <p class="text-[10px] text-gray-500">In Progress</p>
+          <p class="text-xs font-semibold">{{ stats.inProgress }}</p>
+        </div>
+      </div>
+  
+      <div class="flex items-center gap-2">
+        <div class="p-1 rounded-full bg-red-100">
+      
+        </div>
+        <div>
+          <p class="text-[10px] text-gray-500">Overdue</p>
+          <p class="text-xs font-semibold">{{ stats.overdue }}</p>
+        </div>
+      </div>
+  
+      <div class="flex items-center gap-2">
+        <div class="p-1 rounded-full bg-blue-100">
+       
+        </div>
+        <div>
+          <p class="text-[10px] text-gray-500">Total</p>
+          <p class="text-xs font-semibold">{{ stats.total }}</p>
+        </div>
+      </div>
+    </div>
+  
+    <div class="flex items-center justify-between mt-4 gap-4">
+      <div class="bg-white rounded shadow-md p-2 flex-1 h-24 max-w-[200px]">
+        <p class="text-[10px] font-medium mb-1">Completion Rate</p>
+        <canvas id="completionChart" style="height: 30px; width: 100%;"></canvas>
+      </div>
+      <div class="bg-white rounded shadow-md p-2 flex-1 h-24 max-w-[200px]">
+        <p class="text-[10px] font-medium mb-1">Task Status</p>
+        <canvas id="statusChart" style="height: 30px; width: 100%;"></canvas>
+      </div>
+    </div>
+  </div>
+  

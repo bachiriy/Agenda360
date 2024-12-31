@@ -1,0 +1,39 @@
+// Styles for task form component 
+
+.card {
+  border: none;
+  border-radius: 0.5rem;
+  
+  .card-header {
+    border-radius: 0.5rem 0.5rem 0 0;
+  }
+}
+
+.form-label {
+  font-weight: 500;
+  color: #4B5563;
+}
+
+.form-control, .form-select {
+  border-radius: 0.375rem;
+  border-color: #D1D5DB;
+  padding: 0.5rem 0.75rem;
+  
+  &:focus {
+    border-color: #6B7280;
+    box-shadow: 0 0 0 0.2rem rgba(107, 114, 128, 0.25);
+  }
+}
+
+.invalid-feedback {
+  font-size: 0.875rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  
+  .material-icons {
+    font-size: 20px;
+  }
+} 

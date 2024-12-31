@@ -1,0 +1,30 @@
+// Styles for app component 
+
+.navbar {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.navbar-brand {
+  font-weight: 500;
+  
+  .material-icons {
+    font-size: 24px;
+  }
+}
+
+footer {
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+  
+  a {
+    transition: opacity 0.2s;
+    
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}
+
+main {
+  min-height: calc(100vh - 280px);
+} 
