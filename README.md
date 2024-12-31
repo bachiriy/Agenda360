@@ -113,3 +113,6 @@ MIT
 
 ## Figma 
 [Figma Link](https://www.figma.com/design/XAreWzWr9AsDzdrcVSxrO6/Agenda360?node-id=0-1&p=f)
+
+## Jira
+[Jira Link](https://benfill.atlassian.net/jira/software/projects/AG/boards/436)
