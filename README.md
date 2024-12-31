@@ -32,7 +32,7 @@ A modern task management application built with Angular 17, featuring advanced c
 
 ```bash
 git clone https://github.com/bachiriy/Agenda360.git
-cd taskmaster-pro
+cd agenda
 npm install
 ng serve
 ```
