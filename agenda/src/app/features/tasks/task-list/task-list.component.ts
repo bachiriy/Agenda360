@@ -6,6 +6,7 @@ import { Category } from '../../../core/models/category.model';
 
 @Component({
   selector: 'app-task-list',
+  standalone: false,
   templateUrl: './task-list.component.html',
   styleUrls: ['./task-list.component.scss']
 })

@@ -5,7 +5,7 @@
         <div class="card-header bg-dark text-white">
           <h2 class="mb-0">{{ isEditMode ? 'Edit Task' : 'Create New Task' }}</h2>
         </div>
-        <div class="card-body">
+        <div class="card-body" *ngIf="taskExists">
           <form [formGroup]="taskForm" (ngSubmit)="onSubmit()" class="needs-validation">
             <!-- Title -->
             <div class="mb-3">
@@ -89,6 +89,9 @@
               </button>
             </div>
           </form>
+        </div>
+        <div *ngIf="isEditMode && !taskExists">
+          <p routerLink="/tasks" class="not-found-err">404 | Task not found.</p>
         </div>
       </div>
     </div>

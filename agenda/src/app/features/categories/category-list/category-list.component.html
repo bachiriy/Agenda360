@@ -4,16 +4,16 @@
       <h2>Categories</h2>
     </div>
   </div>
-
   <div class="row mb-4">
     <div class="col-md-6">
       <div class="input-group">
         <input 
-          type="text" 
+        type="text" 
           class="form-control"
           placeholder="New category name..."
-          [(ngModel)]="newCategoryName"
+          [(ngModel)]="newCategoryName" 
           (keyup.enter)="addCategory()"
+
         >
         <button 
           class="btn btn-dark"
@@ -32,8 +32,13 @@
         <div *ngFor="let category of categories" class="list-group-item list-group-item-action">
           <div class="d-flex w-100 justify-content-between align-items-center">
             <!-- View Mode -->
-            <div *ngIf="editingCategory?.id !== category.id" class="d-flex w-100 justify-content-between align-items-center">
+            <div (click)="showAssociatedTasks(category.id)" *ngIf="editingCategory?.id !== category.id" class="d-flex w-100 justify-content-between align-items-center">
               <h5 class="mb-0">{{ category.name }}</h5>
+              
+              <div *ngIf="categoryDetails && categoryDetails?.id === category.id"  class="justify-content-between align-items-center">
+                <h5 *ngFor="let task of associatedTasks" class="mb-0" style="color: gray;">- {{ task.title }}</h5>
+              </div>
+              
               <div class="btn-group">
                 <button class="btn btn-outline-secondary" (click)="startEdit(category)">
                   <i class="material-icons">edit</i>
@@ -44,6 +49,9 @@
               </div>
             </div>
 
+           
+
+
             <!-- Edit Mode -->
             <div *ngIf="editingCategory?.id === category.id" class="d-flex w-100 gap-2">
               <input 
@@ -53,6 +61,7 @@
                 (ngModelChange)="editingCategory!.name = $event"
                 (keyup.enter)="updateCategory()"
               >
+
               <div class="btn-group">
                 <button 
                   class="btn btn-dark"

@@ -44,7 +44,7 @@ export class TaskService {
   }
 
   updateTask(taskId: string, updates: Partial<Task>): void {
-    const index = this.tasks.findIndex(task => task.id === taskId);
+    const index = this.tasks.findIndex(task => task.id === taskId);    
     if (index !== -1) {
       this.tasks[index] = {
         ...this.tasks[index],

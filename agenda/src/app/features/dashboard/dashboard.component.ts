@@ -5,6 +5,7 @@ import { Chart } from 'chart.js/auto';
 
 @Component({
   selector: 'app-dashboard',
+  standalone: false,
   templateUrl: './dashboard.component.html'
 })
 export class DashboardComponent implements OnInit {

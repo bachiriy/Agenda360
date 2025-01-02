@@ -38,7 +38,7 @@ export class CategoryService {
       updatedAt: new Date()
     };
 
-    if (this.categories.some(cat => cat.name.toLowerCase() === name.toLowerCase())) {
+    if (this.categories.some(cat => cat.name.toLowerCase() === name.toLowerCase())) {      
       throw new Error('Category already exists');
     }
 

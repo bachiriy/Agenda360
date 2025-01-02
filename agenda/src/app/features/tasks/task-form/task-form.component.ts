@@ -8,16 +8,19 @@ import { Category } from '../../../core/models/category.model';
 
 @Component({
   selector: 'app-task-form',
+  standalone: false,
   templateUrl: './task-form.component.html',
   styleUrls: ['./task-form.component.scss']
 })
 export class TaskFormComponent implements OnInit {
   taskForm: FormGroup;
   categories: Category[] = [];
-  priorities = Object.values(Priority);
-  statuses = Object.values(Status);
-  isEditMode = false;
+  priorities: Priority[] = Object.values(Priority);
+  statuses: Status[] = Object.values(Status);
+  isEditMode: boolean = false;
   taskId: string | null = null;
+
+  taskExists: boolean = true;
 
   constructor(
     private fb: FormBuilder,
@@ -70,9 +73,10 @@ export class TaskFormComponent implements OnInit {
       if (task) {
         this.taskForm.patchValue({
           ...task,
+          // titles: task.title, // to understansd
           dueDate: new Date(task.dueDate).toISOString().slice(0, 16)
         });
-      }
+      } else this.taskExists = false;
     });
   }
 
