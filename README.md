@@ -32,7 +32,7 @@ A modern task management application built with Angular 17, featuring advanced c
 
 ```bash
 git clone https://github.com/bachiriy/Agenda360.git
-cd taskmaster-pro
+cd agenda
 npm install
 ng serve
 ```
@@ -110,3 +110,9 @@ MIT
 3. Commit changes
 4. Push to branch
 5. Submit pull request
+
+## Figma 
+[Figma Link](https://www.figma.com/design/XAreWzWr9AsDzdrcVSxrO6/Agenda360?node-id=0-1&p=f)
+
+## Jira
+[Jira Link](https://benfill.atlassian.net/jira/software/projects/AG/boards/436)
